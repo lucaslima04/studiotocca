@@ -10,12 +10,16 @@
 }
 
 body{
-    background-color: #303030;
+    background-color: #1d1d1d;
 }
 
 header{
     width: 100%;
-    padding: 28px 8%;
+    padding: 28px 6%;
+}
+
+section{
+    padding: 28px 6%;
 }
 
 #navbar{
@@ -28,7 +32,7 @@ header{
 #logotipo{
     font-family: prisma;
     font-size: 40px;
-    color: #ffffff;
+    color: #eee8d5;
 }
 
 #navlist{
@@ -39,13 +43,13 @@ header{
 
 .navitem a{
     text-decoration: none;
-    color: #ffffff;
+    color: #eee8d5;
     font-weight: 600;
 }
 
 .navitem.active a{
     color: #eee8d5;
-    border-bottom: 2px solid #eee8d5;
+    border-bottom: 2px solid #035729;
     border-radius: 20%;
 }
 
@@ -55,17 +59,17 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    background-color: #0051ff;
+    background-color: #035729;
     padding: 10px 14px;
     font-weight: 600;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0, 1);
-    color: #ffffff;
+    color: #eee8d5;
     cursor: pointer;
     transition: background-color .4s ease;
 }
 
 .btndefault:hover{
-    background-color: #0a3ba5;
+    background-color: #03b63f;
 }
 
 #imgmenumob{
@@ -113,6 +117,80 @@ header{
         text-align: center;
     }
 }
+
+#home{
+    display: flex;
+    min-height: calc(100vh - 111px);
+    color: #eee8d5;
+    justify-content: space-around;
+}
+
+#cta{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 5%;
+}
+
+#title1{
+    font-size: 3.6rem;
+}
+
+#description1{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#banner{
+    justify-content: flex-end;
+    align-items: start;
+    display: flex;
+    padding-left: 5%;
+}
+
+#imgbanner{
+    height: 81vh;
+    border-radius: 50%;
+    right: 0;
+    border: solid 2px #035729;
+    transition: .4s ease;
+}
+
+#imgbanner:hover{
+    scale: 1.1;
+}
+
+@media screen and (max-width: 900px){
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner{
+        padding: 0%;
+    }
+
+    #imgbanner{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px ;
+    }
+
+    #cta{
+        width: 100%;
+    }
+
+    #title1{
+        text-align: center;
+    }
+
+}
+
 
 footer{
     position: fixed;
