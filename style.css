@@ -1,0 +1,120 @@
+@font-face {
+    font-family: prisma;
+    src: url(Wolfsburg\ Castle.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #303030;
+}
+
+header{
+    width: 100%;
+    padding: 28px 8%;
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logotipo{
+    font-family: prisma;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+#navlist{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navitem a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navitem.active a{
+    color: #eee8d5;
+    border-bottom: 2px solid #eee8d5;
+    border-radius: 20%;
+}
+
+.btndefault{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #0051ff;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0, 1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+.btndefault:hover{
+    background-color: #0a3ba5;
+}
+
+#imgmenumob{
+    height: 29px;
+    width: 29px;
+}
+
+#mobilebtn{
+    display: none;
+}
+
+#mobilemenu{
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    #navlist, #navbar .btndefault{
+        display: none;
+    }
+    
+    #mobilebtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #mobilemenu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobilenavlist{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobilenavlist .navitem{
+        list-style: none;
+        text-align: center;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
